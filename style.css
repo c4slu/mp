@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+    .logo{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top:  11%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+    }
+    .campos{
+    position: absolute;
+    width: 650px;
+    height: 267px;
+    top:  150px;
+    left: 50%;
+    transform: translate(-50%,-50% );
+    background: linear-gradient(220.18deg, #3E3BEE 22.89%, #2825BB 104.49%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    padding: 05%;
+
+    }
+    .result{
+        position: absolute;
+        background-color: white;
+        color: black;
+        top: 43%;
+        left: 50%;
+        
+    }
+
+
+    
+    .simulador{
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+        font-size: 12px;
+    }
+    .resultados{
+        position: absolute;
+        background-color: white;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+        border-radius: 15%;
+        padding: 15px;
+        font-size: 13px;
+        color: #2825BB;
+        font-style: normal;
+    }
+    .inputs{
+        width: 270px;
+        height: 30px;
+        color: white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 10px;
+        padding: 15x;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+
+    }
+    .inputs2{
+        width: 270px;
+        height: 30px;
+        color: black;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 10px;
+        padding: 15x;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+
+    }
+    .inputss{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+    }
+    .carteira{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 25px;
+        height: 25px;
+ 
+
+    }
+    .carteira2{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 25px;
+        height: 25px;
+ 
+
+    }
+
+    .bloco1{
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+
+    .titulo_share_debito{
+        position: absolute;
+        top: 30%;
+        left: 68%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        color: white;
+        font-size: 11px;
+
+    }
+    
+
+    
+    .bloco2{
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+        color: white;
+        background-color: #3E3BEE;
+        margin: 0px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    
+    
+
+    }
+    #share_credito2{
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+        color: white;
+        margin: 0px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 1px;
+    }
+    .bloco3{
+        position: absolute;
+        top: 45%;
+        left: 64%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .bloco4{
+        position: absolute;
+        top: 60%;
+        left: 64%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+    }
+    .bloco5{
+        position: absolute;
+        top: 60%;
+        left: 37%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .bloco6{
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .botao{
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+
+
+    }
+    #comentario{
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        border: none;
+        text-align: center;
+        color: white;
+        padding: 1%;
+        background: none;
+        
+
+        
+
+
+    }
+    .limpar{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        border: none;
+        text-align: center;
+        color: white;
+        padding: 1%;
+        background: none;
+
+    }
+    .titulo_share{
+        position: absolute;
+        top: 30%;
+        left: 68%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        color: white;
+        font-size: 11px;
+
+    }
+    .valor_share{
+        position: absolute;
+        top: 65%;
+        left: 68%;
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%,-50% );
+        color: white;
+        background: none;
+        border: none;
+        font-size: 20px;
+
+    }
+
