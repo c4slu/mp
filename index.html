@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Mercado Pago</title>
+</head>
+
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+
+    }
+    .logo{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top:  11%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+    }
+    .campos{
+    position: absolute;
+    width: 650px;
+    height: 267px;
+    top:  150px;
+    left: 50%;
+    transform: translate(-50%,-50% );
+    background: linear-gradient(220.18deg, #3E3BEE 22.89%, #2825BB 104.49%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    padding: 05%;
+
+    }
+    .result{
+        position: absolute;
+        background-color: white;
+        color: black;
+        top: 43%;
+        left: 50%;
+        
+    }
+
+
+    
+    .simulador{
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+        font-size: 12px;
+    }
+    .resultados{
+        position: absolute;
+        background-color: white;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+        border-radius: 15%;
+        padding: 15px;
+        font-size: 13px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #2825BB;
+        font-style: normal;
+    }
+    .inputs{
+        width: 270px;
+        height: 30px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 10px;
+        padding: 15x;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+
+    }
+    .inputs2{
+        width: 270px;
+        height: 30px;
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 10px;
+        padding: 15x;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+
+    }
+    .inputss{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50% );
+    }
+    .carteira{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 25px;
+        height: 25px;
+ 
+
+    }
+    .carteira2{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 25px;
+        height: 25px;
+ 
+
+    }
+
+    .bloco1{
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+
+    .titulo_share_debito{
+        position: absolute;
+        top: 30%;
+        left: 68%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 11px;
+
+    }
+    
+
+    
+    .bloco2{
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3E3BEE;
+        margin: 0px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    
+    
+
+    }
+    #share_credito2{
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        margin: 0px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 1px;
+    }
+    .bloco3{
+        position: absolute;
+        top: 45%;
+        left: 64%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .bloco4{
+        position: absolute;
+        top: 60%;
+        left: 64%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+    }
+    .bloco5{
+        position: absolute;
+        top: 60%;
+        left: 37%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .bloco6{
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 172px;
+        height: 94px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background-color: #3e3bee;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        border-radius: 20px
+
+    }
+    .botao{
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        width: 172px;
+        height: 94px;
+        transform: translate(-50%,-50% );
+
+
+    }
+    #comentario{
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        border: none;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        padding: 1%;
+        background: none;
+        
+
+        
+
+
+    }
+    .limpar{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        border: none;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        padding: 1%;
+        background: none;
+
+    }
+    .titulo_share{
+        position: absolute;
+        top: 30%;
+        left: 68%;
+        width: 500px;
+        height: 10%;
+        transform: translate(-50%,-50% );
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 11px;
+
+    }
+    .valor_share{
+        position: absolute;
+        top: 65%;
+        left: 68%;
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%,-50% );
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        background: none;
+        border: none;
+        font-size: 20px;
+
+    }
+
+
+</style>
+
+
+
+<body>
+
+    <div class="calculado">    
+        <h1 class="resultados">RESULTADO</h1>
+           
+
+        <div class="bloco1">
+            <input type="text" class="valor_share" name="result" id="share_debito">
+            <img src="img/carteira.png" alt="" class="carteira2">
+            <p class="titulo_share">SHARE DÉBITO</p>
+        </div>    
+
+
+
+        <div class="bloco2"> 
+            <input type="text" class="valor_share" name="result" id="share_credito">
+            <img class="carteira" src="IMG/carteira.png">
+            <p class="titulo_share">SHARE CRÉDITO</p>
+            </div>
+
+
+        <div class="bloco3">    
+        <input type="text" class="valor_share" name="result" id="mdr_debito">
+        <img src="img/money.png" alt="" class="carteira">
+        <p class="titulo_share">MDR DÉBITO</p>
+        </div>
+
+        <div class="bloco4">
+            <input type="text" class="valor_share" name="result" id="mdr_credito">
+            <img src="img/money.png" alt="" class="carteira">
+            <p class="titulo_share">MDR CRÉDITO</p>
+        </div>
+        <div class="bloco5">
+        <input type="text" class="valor_share" name="result" id="mdr_total">
+        <img src="img/money (1).png" alt="" class="carteira">
+        <p class="titulo_share">MDR TOTAL</p>
+        </div>
+        
+        <DIV class="bloco6">
+        <input type="text" class="valor_share" name="result" id="mdr_ano">
+        <img src="img/money (1).png" alt="" class="carteira">
+        <p class="titulo_share">MDR ANUAL</p>
+    </DIV>
+
+    
+        <table>
+            <tr>
+                <td> 
+                <input class="botao" type="button" value="CALCULAR" onclick="Calculadora();" name=""> 
+                </td>
+            </tr> 
+        </table>
+    </div>
+
+
+
+    <div class="campos">
+        <img class="logo" src="https://logospng.org/download/mercado-pago/logo-mercado-pago-icone-1024.png" alt="">
+        <h1 class="simulador">Calculadora - Mercado Pago</h1>
+        <TABLE class="inputss">
+            <TR>
+            <td class="inputs"><label for="faturamento">Faturamento:</label>
+            <input class="inputs2" type="number" id="faturamento" /></td> 
+            
+            <td class="inputs"><label for="SHARED2">Share Debito:</label>
+            <input class="inputs2" type="number" id="SHARED"/></td>
+        </TR>   
+        <tr>     
+            <td class="inputs"><label for="SHAREC">Share Credito:</label>
+            <input class="inputs2" type="number" id="SHAREC"/></td>
+
+            
+                <td class="inputs"><label for="aluguel">Aluguel Maquininha:</label>
+                <input class="inputs2" type="number" id="aluguel"></td>
+            </TR>         
+            <tr>
+            <td class="inputs"><label for="txdebito">Taxa Maquinha Debito:</label>
+                <input class="inputs2" type="porcent" id="txdebito"></td>
+                  
+                <td class="inputs"><label for="txcredito">Taxa Maquinha Credito:</label>
+                <input class="inputs2" type="number" id="txcredito"></td>
+                
+            </TR>
+        </TABLE>
+        <p class="comentario" type="text" value="" id="comentario">
+                
+        
+    </div>
+
+<script type="text/javascript">
+function Calculadora(){
+        let faturamento = document.getElementById("faturamento").value;
+        let shared = document.getElementById("SHARED").value;
+        let sharedc = document.getElementById("SHAREC").value;
+        let aluguel = document.getElementById("aluguel").value;
+        let txdebito = document.getElementById("txdebito").value;
+        let txcredito = document.getElementById("txcredito").value;
+        
+        //calculos
+        let debitos = (faturamento*shared)/100;
+        let creditos = (faturamento*sharedc)/100;
+        let mdrdeb = (debitos*txdebito)/100;
+        let mdrcred = (creditos*txcredito)/100;;
+        let mdrtotal = (mdrdeb+mdrcred);
+        let mdrano = (mdrtotal+aluguel)*12;
+
+
+        var debitos_ =  debitos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        var creditos_ = creditos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        var mdrdeb_ = mdrdeb.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        var mdrcred_ = mdrcred.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        var mdrtotal_ = mdrtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        var mdrano_ = mdrano.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+
+        if (document.getElementById("faturamento").value == "" ||
+        document.getElementById("SHARED").value == "" ||
+        document.getElementById("SHAREC").value == "" ||
+        document.getElementById("aluguel").value == "" ||
+        document.getElementById("txdebito").value == "" ||
+        document.getElementById("txcredito").value == ""
+            ) {
+            comentario.value = "Impossivel concluir o calculo, verifique novamente os campos acima." 
+        } else {
+            comentario.value = "" 
+
+            share_debito.value = debitos_
+            share_credito.value = creditos_
+            mdr_debito.value = mdrdeb_
+            mdr_credito.value = mdrcred_
+            mdr_ano.value = mdrano_
+            mdr_total.value = mdrtotal_
+
+        }
+
+        function zerar() {
+
+            faturamento.value = ""
+            share_credito.value = ""
+            mdr_debito.value = ""
+            mdr_credito.value = ""
+            mdr_ano.value = ""
+            mdr_total.value = ""
+
+            
+
+            
+        }
+
+
+
+
+
+        console.log(debitos_,creditos_,mdrdeb_,mdrcred_,mdrtotal_,mdrano_)
+
+}
+
+
+</SCRipt>>
+    
+</body>
+</html>
